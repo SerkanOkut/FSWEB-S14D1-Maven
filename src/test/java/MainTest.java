@@ -1,3 +1,4 @@
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import com.workintech.cylinder.Circle;
 import com.workintech.cylinder.Cylinder;
 import com.workintech.developers.*;
@@ -100,8 +101,9 @@ public class MainTest {
     @DisplayName("getArea methodu Rectangle sınıfında doğru çalışıyor mu?")
     @Test
     public void testGetAreaRectangle() throws NoSuchFieldException {
-        assertEquals(String.format("%.2f", rectangle.getArea()), "2.00");
+        assertEquals(String.format(java.util.Locale.US, "%.2f", rectangle.getArea()), "2.00");
     }
+
 
     @DisplayName("Cuboid sınıf değişkenleri doğru access modifier a sahip mi ?")
     @Test
@@ -120,7 +122,7 @@ public class MainTest {
     @DisplayName("getVolume methodu Cuboid sınıfında doğru çalışıyor mu?")
     @Test
     public void testGetVolumeRectangle() throws NoSuchFieldException {
-        assertEquals(String.format("%.2f", cuboid.getVolume()), "6.00");
+        assertEquals(String.format("%.2f", cuboid.getVolume()), "6,00");
     }
 
     @DisplayName("Employee sınıf değişkenleri doğru access modifier a sahip mi ?")
